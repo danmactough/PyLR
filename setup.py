@@ -5,6 +5,7 @@
 # Licensed under Apache Software License, Version 2.0
 #
 
+from __future__ import absolute_import
 try:
    import setuptools
    from setuptools import setup
@@ -22,7 +23,7 @@ if setuptools is not None:
 
 def get_version():
     local_vars = {}
-    exec(open('pylr/version.py'),{},local_vars)
+    exec(open('pylr/version.py').read(),{},local_vars)
     return local_vars["__version__"]
 
 version = get_version()
